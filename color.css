@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background: #43cea2; 
+    background: -webkit-linear-gradient(to right, #185a9d, #43cea2); 
+    background: linear-gradient(to right, #185a9d, #43cea2); 
+
+}
+header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+h1{
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 400;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.calculadora-body{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(255, 255, 255, 0.30);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 8px;
+    margin-top: 27px;
+}
+
+.display{
+    color: #fafafa;
+    border-radius: 8px 8px 0 0;
+    padding: 40px;
+    font-size: 2.5rem;
+}
+
+/* Botones */
+
+.botones{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.botones button{
+    padding: 40px;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: .2s all linear;
+    border: none;
+    background: rgba(255, 255, 255, 0.40);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+    backdrop-filter: blur(2rem);
+    -webkit-backdrop-filter: blur(2rem);
+    font-weight: 500;
+    color: #fafafa;
+}
+.botones button:hover{
+    background-color: rgba(255, 255, 255, 0.50);
+}
+
+.botones button:active{
+    background-color: rgba(255, 255, 255, 0.70);
+}
+
+#igual{
+    background-color: rgba(236, 24, 24, 0.45);
+    border-radius: 0 0 8px 0;
+}
+#igual:hover{
+    background-color: rgba(236, 24, 24, 0.60);
+}
+
+#delete{
+    background-color: rgba(243, 165, 20, 0.40);
+}
+#delete:hover{
+    background-color: rgba(243, 165, 20, 0.75);
+}
+#delete-recent{
+    background-color: rgba(240, 206, 58, 0.40);
+}
+#delete-recent:hover{
+    background-color: rgba(240, 206, 58, 0.75);
+}
+
+#operadores{
+    background-color: rgba(35, 167, 255, 0.40);
+}
+#operadores:hover{
+    background-color: rgba(35, 167, 255, 0.75);
+}
+
+#mm{
+    border-radius: 0 0 0 8px;
+}
+
+
+.autor {
+    color: #fefefe;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    margin-top: 116px;
+    margin-top: 116px;
+    position: relative;
+    top: 678px;
+  }
+  
+  .diseño {
+    font-weight: 300;
+    margin-right: 5px;
+    font-size: 1rem;
+  }
+  
+  .iooo {
+    font-weight: 500;
+    color: #070606;
+    font-size: 1rem;
+  }
+  
+
+/* MOBILE VERSION */
+
+@media screen and (max-width: 768px) {
+    h1 {
+    font-size: 32px;
+    margin-top: 25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .calculadora-body{
+        margin-top: 13px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .botones button{
+        padding: 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .autor{
+        margin-top:5px;
+        top: 565px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .autor p{
+        font-size: 12px;
+   }
+ }
+ /* 
+ @media screen and (max-width: 768px) {
+    {
+   ;
+   }
+ } */ 
+ /* 
+ @media screen and (max-width: 768px) {
+    {
+   ;
+   }
+ } */ 
