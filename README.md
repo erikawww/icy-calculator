@@ -1,4 +1,4 @@
-# Icy Calculator
+# Icy Calculator 🧊
 Javascript exercise just for fun.
 
 U can see the project [here](https://icy-calculator.netlify.app)

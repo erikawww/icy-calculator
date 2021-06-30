@@ -2,13 +2,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 body{
     background: #43cea2; 
     background: -webkit-linear-gradient(to right, #185a9d, #43cea2); 
     background: linear-gradient(to right, #185a9d, #43cea2); 
-
 }
 header{
     display: flex;
@@ -16,156 +15,218 @@ header{
     justify-content: space-evenly;
 }
 h1{
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.80);
     font-weight: 400;
     font-size: 3rem;
     text-align: center;
     margin-top: 50px;
 }
 
-.calculadora-body{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    background: rgba(255, 255, 255, 0.30);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+/* BODY CALCULATOR */
+.calculadora-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 80vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
     border-radius: 8px;
-    margin-top: 27px;
 }
-
 .display{
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
     color: #fafafa;
     border-radius: 8px 8px 0 0;
-    padding: 40px;
     font-size: 2.5rem;
+    background: rgba(34, 34, 34, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    padding:35px;
 }
 
-/* Botones */
+/* BUTTONS */
 
-.botones{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-}
-
-.botones button{
-    padding: 40px;
+button{
+    cursor: pointer;
     font-size: 1.5rem;
-    text-align: center;
-    transition: .2s all linear;
     border: none;
-    background: rgba(255, 255, 255, 0.40);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-    backdrop-filter: blur(2rem);
-    -webkit-backdrop-filter: blur(2rem);
-    font-weight: 500;
+    outline: none;
+    background: rgba(255, 255, 255, 0.30);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); 
     color: #fafafa;
 }
-.botones button:hover{
-    background-color: rgba(255, 255, 255, 0.50);
+#resultado p{
+    font-size: 1.8rem;
 }
-
-.botones button:active{
+button:hover{
+    background-color: rgba(255, 255, 255, 0.55);
+}
+button:active{
     background-color: rgba(255, 255, 255, 0.70);
 }
-
+#operadores{
+    background-color: rgba(35, 167, 255, 0.40);
+}
+#operadores:hover{
+    background-color: rgba(35, 167, 255, 0.55);
+}
+#operadores:active{
+    background-color: rgba(35, 167, 255, 0.70);
+}
 #igual{
-    background-color: rgba(236, 24, 24, 0.45);
+    grid-column: span 2;
     border-radius: 0 0 8px 0;
-}
+    background-color: rgba(236, 24, 24, 0.40);
+    }
 #igual:hover{
-    background-color: rgba(236, 24, 24, 0.60);
+    background-color: rgba(236, 24, 24, 0.55);
 }
-
-#delete{
+#igual:active{
+    background-color: rgba(236, 24, 24, 0.70);
+}
+#coma{
+    border-radius: 0 0 0 8px;
+}
+#delete-all{
+    grid-column: span 2;
     background-color: rgba(243, 165, 20, 0.40);
 }
-#delete:hover{
-    background-color: rgba(243, 165, 20, 0.75);
+#delete-all:hover{
+    background-color: rgba(243, 165, 20, 0.55);
+}
+#delete-all:active{
+    background-color: rgba(243, 165, 20, 0.70);
 }
 #delete-recent{
     background-color: rgba(240, 206, 58, 0.40);
 }
 #delete-recent:hover{
-    background-color: rgba(240, 206, 58, 0.75);
+    background-color: rgba(240, 206, 58, 0.55);
+}
+#delete-recent:active{
+    background-color: rgba(240, 206, 58, 0.70);
 }
 
-#operadores{
-    background-color: rgba(35, 167, 255, 0.40);
-}
-#operadores:hover{
-    background-color: rgba(35, 167, 255, 0.75);
-}
-
-#mm{
-    border-radius: 0 0 0 8px;
-}
-
-
+/* Footer */
 .autor {
     color: #fefefe;
     display: flex;
     flex-flow: row;
     justify-content: center;
-    margin-top: 116px;
-    margin-top: 116px;
     position: relative;
-    top: 678px;
   }
   
   .diseño {
-    font-weight: 300;
-    margin-right: 5px;
+    margin-right: 6px;
     font-size: 1rem;
+    line-height: 1rem;
   }
   
   .iooo {
     font-weight: 500;
-    color: #070606;
+    color: #222;
     font-size: 1rem;
+    line-height: 1rem;
   }
-  
 
-/* MOBILE VERSION */
+  /* MOBILE BIG*/
 
-@media screen and (max-width: 768px) {
+  @media screen and (max-width: 375px) {
     h1 {
-    font-size: 32px;
-    margin-top: 25px;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    }
+}
+@media screen and (max-width: 375px) {
+    p{
+        font-size: 1.2;
     }
 }
 
-@media screen and (max-width: 768px) {
-    .calculadora-body{
-        margin-top: 13px;
-    }
-}
-@media screen and (max-width: 768px) {
-    .botones button{
-        padding: 24px;
-    }
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 375px) {
     .autor{
-        margin-top:5px;
-        top: 565px;
+        margin-top:20px;
     }
 }
-@media screen and (max-width: 768px) {
-    .autor p{
-        font-size: 12px;
+@media screen and (max-width: 375px) {
+    .calculadora-grid{
+        min-height: 77vh;
+        grid-template-columns: repeat(4, 75px);
+        grid-template-rows: minmax(120px, auto) repeat(5, 75px);
    }
  }
- /* 
- @media screen and (max-width: 768px) {
-    {
-   ;
+ @media screen and (max-width: 375px) {
+    .autor{
+        margin-top:20px;
+        margin-bottom: 5px;
+    }
+}
+/* MOBILE MEDIUM */
+@media screen and (max-width: 414px) {
+  h1 {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 414px) {
+  p{
+      font-size: 1.2;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .autor{
+      margin-top:20px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .calculadora-grid{
+      min-height: 77vh;
+      grid-template-columns: repeat(4, 75px);
+      grid-template-rows: minmax(120px, auto) repeat(5, 75px);
+ }
+}
+@media screen and (max-width: 414px) {
+  .autor{
+      margin-top:20px;
+      margin-bottom: 5px;
+  }
+}
+/* MOBILE LITTLE */
+
+@media screen and (max-width: 320px) {
+    h1 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 320px) {
+    p{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 320px) {
+    button{
+        cursor: pointer;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .calculadora-grid{
+        grid-template-columns: repeat(4, 60px);
+        grid-template-rows: minmax(120px, auto) repeat(5, 60px);
    }
- } */ 
- /* 
- @media screen and (max-width: 768px) {
-    {
-   ;
-   }
- } */ 
+ }
+ @media screen and (max-width: 320px) {
+    .autor{
+        margin-top:20px;
+        margin-bottom:5px;
+    }
+}

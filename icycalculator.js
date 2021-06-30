@@ -1,10 +1,8 @@
-
-
 // Icy Calculadora \\
 
 function getInputValue(){
     let input = event.target.innerText;
-    console.log(input)
+    // console.log(input)
     printValue(input);
 }
 
@@ -16,7 +14,6 @@ function printValue(value){
     {
         if(value !="C" && value != "CE"){
             out.innerHTML="";
-            // out.innerHTML += value;
         }
 
     }else
@@ -44,3 +41,4 @@ let buttons = document.getElementsByTagName('button');
 for (let i = 0; i<buttons.length; i++){
     buttons[i].setAttribute('onclick','getInputValue()');
 }
+
