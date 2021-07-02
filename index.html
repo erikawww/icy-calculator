@@ -7,13 +7,15 @@
     <meta name="description" content="easy and simple calculator, calculator">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style -->
     <link rel= "stylesheet" href="color.css">
     <title>Icy Calculator</title>
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    <!-- Manifest -->
+    <link rel="manifest" href="manifest.json">
     <meta name="msapplication-config" content="browserconfig.xml" />
     <meta name="msapplication-TileColor" content="#fafafa">
     <meta name="theme-color" content="#fafafa">
@@ -61,5 +63,10 @@
     <script src="colorrandom.js"></script> -->
     <script src="icycalculator.js"></script>
     <!-- <script src="jquery-color.js"></script>   -->
+    <script>
+        if ('serviceWorker' in navigator){
+            navigator.serviceWorker.register('sw.js')
+        }
+    </script>
 </body>
 </html>
