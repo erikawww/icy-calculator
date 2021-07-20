@@ -5,10 +5,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body{
-   background: #8CA6DB;   /* fallback for old browsers */
-   background: -webkit-linear-gradient(to right,#74ebd5, #8CA6DB, #B993D6,#acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    animation: gradient 3s ease infinite;
+    background: #8CA6DB;   /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right,#74ebd5, #8CA6DB, #B993D6,#acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,#74ebd5, #8CA6DB, #B993D6,#acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    animation: gradient 20s ease infinite;
     width: 100%;
     height: 100%;
     background-size:400% 400%;
@@ -36,7 +36,7 @@ header{
 }
 h1{
     color: #fafafa;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 3rem;
     text-align: center;
     margin-top: 50px;
@@ -62,10 +62,28 @@ h1{
     color: #fafafa;
     border-radius: 8px 8px 0 0;
     font-size: 2.5rem;
-    background: rgba(34, 34, 34, 0.15);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    background: rgba(206, 204, 204, 0.5);
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 8px 32px 0 rgba(34, 34, 34, 0.2);
     padding:35px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
+.circulo {
+    width: 400px;
+    height: 400px;
+    /* -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%; */
+    color: rgb(211, 75, 21);
+    position: absolute;
+    top: -290;
+    right: 0;
+    left: 150px;
+   /* z-index: -100;  */
+    
+} 
 
 /* BUTTONS */
 
@@ -83,6 +101,7 @@ button{
 }
 button:hover{
     background-color: rgba(255, 255, 255, 0.55);
+    animation: 20s ease;
 }
 button:active{
     background-color: rgba(255, 255, 255, 0.70);
